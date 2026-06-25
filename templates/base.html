@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Dibyaranjan Jena{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="icon" href="{{ url_for('static', filename='src/monitor.ico') }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Montserrat:wght@600&family=PT+Serif:ital@1&family=Roboto+Slab&family=Sacramento&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="header-div">
+    <table class="header-table">
+      <tr>
+        <td class="header-table-data"><a class="header-data-link" href="{{ url_for('static', filename='docs/Resume.docx') }}">Resume</a></td>
+        <td class="header-table-data"><a class="header-data-link" href="https://github.com/dibyaranjanGIT">Git</a></td>
+      </tr>
+    </table>
+    <nav class="header-nav">
+      <a href="{{ url_for('index') }}">Home</a>
+      <a href="{{ url_for('about') }}">About</a>
+      <a href="{{ url_for('projects') }}">Projects</a>
+      <a href="{{ url_for('contact') }}">Contact</a>
+    </nav>
+  </div>
+
+  {% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+  <div class="flash-messages">
+    {% for category, message in messages %}
+    <div class="flash {{ category }}">{{ message }}</div>
+    {% endfor %}
+  </div>
+  {% endif %}
+  {% endwith %}
+
+  {% block content %}{% endblock %}
+
+  <div class="bottom">
+    <a class="footer-link-linkedin" href="https://www.linkedin.com/in/dibyaranjan-jena-%F0%9F%87%AE%F0%9F%87%B3-716517aa/">LinkedIn</a>
+    <a class="footer-link-git" href="https://github.com/dibyaranjanGIT">Github</a>
+    <p class="rserved">@ {{ current_year }} <a href="{{ url_for('index') }}">Dibyaranjan</a>
+      All rights reserved</p>
+  </div>
+</body>
+
+</html>

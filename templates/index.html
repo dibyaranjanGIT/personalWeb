@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+
+{% block title %}Dibyaranjan Jena personal website{% endblock %}
+
+{% block content %}
+<div class="top">
+  <img class="top_cloud" src="{{ url_for('static', filename='images/cloud.png') }}" alt="">
+  <h1>I'm Dibyaranjan</h1>
+  <p class="top-heading-prgrammer">a <span class="pro-grammer">pro</span>grammer and learner.</p>
+  <img class="bottom_cloud" src="{{ url_for('static', filename='images/cloud.png') }}" alt="">
+  <img class="hill_img" src="{{ url_for('static', filename='src/land.svg') }}" alt="">
+</div>
+
+<div class="middle">
+  <div class="intro">
+    <img src="{{ url_for('static', filename='src/me.png') }}" alt="my image" width="200" height="200">
+    <h3 class="IntroHi">Hi,</h3>
+    <p class="my-intro"> I'm a <span class="de">Data Engineer</span>, based out of India. I am a lifelong learner, intrigued about finding meaning in data using my expertise in business intelligence tool. I am passionate about programming and love to solve
+      challenging business problems.
+    </p>
+  </div>
+</div>
+
+<div class="skills-container">
+  <div class="skills">
+    <hr>
+    <h2>My Skills</h2>
+    <table class="table-skills-data">
+      <tr>
+        <td><img class="python" src="{{ url_for('static', filename='images/python.png') }}" alt="Python"> </td>
+        <td><img class="sqlimage" src="{{ url_for('static', filename='images/sql.png') }}" alt="Sqlimage"></td>
+        <td><img class="powerbi" src="{{ url_for('static', filename='images/spark.png') }}" alt="" title="Spark"></td>
+        <td><img class="machine" src="{{ url_for('static', filename='images/aws-modified.png') }}" alt="AWS"></td>
+        <td><img class="machine" src="{{ url_for('static', filename='images/git.png') }}" alt="Git Versioning"></td>
+      </tr>
+      <tr>
+        <td>
+          <p>Python</p>
+        </td>
+        <td>
+          <p>SQL</p>
+        </td>
+        <td>
+          <p>Spark</p>
+        </td>
+        <td>
+          <p>AWS</p>
+        </td>
+        <td>
+          <p>GIT</p>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<div class="education">
+  <hr>
+  <h2>My Education</h2>
+  <h4 class="higher-education"> Bachelor's of Degree in Electronics and Telecomm </h4>
+  <p class="higher-education-para"> Silicon Institute of Technology, Odisha, India </p>
+  <p class="higher-education-para"> 2010 - 2014 </p>
+
+  <h4 class="inter-education"> Higher Secondary Education in Science </h4>
+  <p class="inter-education-para"> Govt. Junior College, Odisha, India </p>
+  <p class="inter-education-para"> 2007 - 2009 </p>
+
+  <hr class="bottom-education-hr">
+</div>
+
+<div class="flat-bottom">
+  <h3 class="h3-do-you-love-prgramming-heading">Do you love programming ?</h3>
+
+  <div class="giphy-content">
+    <table>
+      <tr>
+        <td>
+          <iframe src="https://giphy.com/embed/iIqmM5tTjmpOB9mpbn" width="480" height="268" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+        </td>
+        <td>
+          <iframe src="https://giphy.com/embed/gG6OcTSRWaSis" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+{% endblock %}

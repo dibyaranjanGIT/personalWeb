@@ -1,0 +1,434 @@
+/* ############################# TAG SELECTORS #############################  */
+/* 1em = 16px */
+body {
+  background-color: #DFEEEA;
+  margin: 0;
+  text-align: center;
+}
+
+h1 {
+  color: #1e836c;
+  /*   1e836c D3DEDC */
+  font-family: 'Sacramento', cursive;
+  font-size: 50px;
+}
+
+a:hover {
+  color: #1e836c;
+}
+
+a {
+  color: #1572A1;
+  border-bottom: 1px solid #45b29a;
+  font-size: 1em;
+  text-decoration: none;
+}
+
+p {
+  text-align: center;
+  color: #45b29a;
+  font-weight: 400;
+  margin: 0;
+  font-size: 1.5em;
+  padding: 0 0 0;
+  /* font-family: 'PT Serif', serif; */
+
+}
+
+h3 {
+  color: #1e836c;
+  text-align: center;
+  font-size: 3.2em;
+  font-weight: 400;
+}
+
+h2 {
+  color: #1e836c;
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: 400;
+}
+
+h5 {
+  margin-top: 0.5%;
+  margin-bottom: 0.2%;
+  color: #1e836c;
+  font-size: 1em;
+  font-weight: 500;
+  font: "Fira Sans", sans-serif;
+}
+
+hr {
+  position: relative;
+  border-style: dotted none none;
+  border-color: grey;
+  border-width: 5px;
+  width: 5%;
+}
+
+table {
+  margin-left: 250px;
+  margin-right: 250px;
+}
+
+/* ############################ CLASS SELECTORS ############################ */
+.top {
+  padding-top: 120px;
+  padding-bottom: 20px;
+  margin-bottom: 80px;
+  max-width: 100%;
+  position: relative;
+}
+
+.hill_img {
+  position: absolute;
+}
+
+.top_cloud {
+  position: absolute;
+  right: 300px;
+  top: 50px;
+}
+
+.bottom_cloud {
+  position: absolute;
+  left: 300px;
+  bottom: 300px;
+}
+
+.hill_img {
+  max-width: 100%;
+  position: relative;
+  top: 50px;
+  padding-bottom: 50px;
+  overflow: auto;
+}
+
+.middle {
+  margin-top: 50px;
+  padding-top: 120px;
+  padding-bottom: 50px;
+  background-color: #F7F7F7;
+}
+
+.my-intro{
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.intro {
+  width: 50%;
+  margin: auto;
+  background-color: #F7F7F7;
+  line-height: 1.5;
+}
+
+.IntroHi {
+  margin-bottom: 20px;
+}
+
+.skills {
+  background-color: #F7F7F7;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+.sqlimage {
+  width: 25%;
+}
+
+.powerbi {
+  width: 30%;
+  margin-top: 2.5%;
+}
+
+.excel {
+  width: 28%;
+  margin-top: 2.5%;
+}
+
+.python {
+  width: 18%;
+  margin-top: 2.5%;
+}
+
+.machine {
+  width: 25%;
+  margin-top: 2.5%;
+}
+
+
+.statistics {
+  width: 20%;
+  margin-top: 2.5%;
+  margin-right: 80px;
+}
+
+.ranking {
+  font-size: .5em;
+  margin-top: 0.5%;
+  font-weight: 200;
+}
+
+.education {
+  text-align: center;
+  background-color: #F7F7F7;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.higher-education {
+  margin-left: 25%;
+  margin-right: 25%;
+  color: #45b29a;
+  font-size: 1.3em;
+  width: 50%;
+}
+
+.higher-education-para{
+  font-size: 1.2em;
+}
+
+.inter-education {
+  margin-left: 25%;
+  margin-right: 25%;
+  color: #45b29a;
+  font-size: 1.3em;
+  width: 50%;
+}
+
+.inter-education-para{
+  font-size: 1.2em;
+}
+.Projects {
+  background-color: #DFEEEA;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+.dashboard {
+  max-width: 100%;
+}
+
+.bottom {
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.footer-link-git {
+  margin-left: 15px;
+  font-family: "Montserrat", sans-serif;
+  color: #1572A1;
+  text-decoration: none;
+}
+
+.footer-link-linkedin {
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  color: #1572A1;
+}
+
+.rserved {
+  padding-top: 20px;
+  text-decoration: none;
+  color: #1572A1;
+}
+
+
+.header-table{
+  background-color: #B1D7B4; /* 90C8AC */
+  height: 50px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+.header-table-data{
+  padding-left: 2em;
+  padding-right: 2.5em;
+  font-weight: bold;
+
+}
+
+.header-div{
+    padding-top:40px;
+    /* position: fixed; */
+}
+
+.boxhead a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+.header-data-link{
+    color: #3D8361;
+    text-decoration: none;
+}
+
+.de{
+  text-decoration: underline;
+}
+
+.pro-grammer{
+  text-decoration: underline;
+}
+
+.table-skills-data{
+  margin: 0 auto 0 auto;
+}
+
+.top-heading-prgrammer{
+  font-family: 'Roboto Slab', serif;
+}
+
+.flat-bottom {
+  max-width: 100%;
+  background-color: #F7F7F7;
+  /* position: absolute; */
+  margin: 0 auto;
+  padding-top: 20px;
+  /* padding-bottom: 50px; */
+}
+
+.giphy-content{
+    overflow: scroll;
+
+    width: 100%;
+    margin: 0 auto;
+}
+
+.bottom-education-hr{
+  margin-top: 35px;
+}
+
+.h3-do-you-love-prgramming-heading{
+  margin-top: 0px;
+}
+
+/* ##################### ADDITIONS FOR THE FLASK MULTI-PAGE APP ##################### */
+/* The original site is a single page. These styles theme the extra Flask
+   routes (About, Projects, Contact) and the nav/flash messaging consistently. */
+
+.header-nav {
+  margin-top: 18px;
+}
+
+.header-nav a {
+  margin: 0 14px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: #1572A1;
+  border-bottom: none;
+}
+
+.header-nav a:hover {
+  color: #1e836c;
+}
+
+.page {
+  width: 60%;
+  margin: 60px auto;
+  background-color: #F7F7F7;
+  padding: 40px;
+  border-radius: 12px;
+  line-height: 1.6;
+}
+
+.page p {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1.2em;
+  margin-bottom: 16px;
+}
+
+.page ul {
+  display: inline-block;
+  text-align: left;
+  color: #45b29a;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1.1em;
+}
+
+.project-card {
+  background-color: #DFEEEA;
+  border-radius: 12px;
+  padding: 24px;
+  margin: 20px auto;
+  width: 70%;
+}
+
+.project-card h4 {
+  color: #1e836c;
+  font-size: 1.4em;
+  margin: 0 0 10px;
+}
+
+.project-card .tech {
+  font-size: 1em;
+  color: #1572A1;
+}
+
+/* Flash messages */
+.flash-messages {
+  width: 50%;
+  margin: 30px auto 0;
+}
+
+.flash {
+  padding: 14px 18px;
+  border-radius: 8px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1em;
+  margin-bottom: 12px;
+}
+
+.flash.success {
+  background-color: #C8E6C9;
+  color: #1e836c;
+}
+
+.flash:not(.success) {
+  background-color: #FFE0E0;
+  color: #B23A48;
+}
+
+/* Contact form */
+.contact-form {
+  width: 50%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.contact-form label {
+  display: block;
+  color: #1e836c;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  margin: 16px 0 6px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid #B1D7B4;
+  border-radius: 8px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1em;
+  background-color: #fff;
+}
+
+.contact-form button {
+  margin-top: 22px;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 8px;
+  background-color: #1e836c;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #45b29a;
+}
