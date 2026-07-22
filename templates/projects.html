@@ -1,20 +1,44 @@
 {% extends 'base.html' %}
 
-{% block title %}Projects - Dibyaranjan Jena{% endblock %}
+{% block title %}Projects — Dibyaranjan Jena{% endblock %}
 
 {% block content %}
-<div class="page">
-  <h2>Projects</h2>
-  <p>A few things I have been building.</p>
-</div>
-
-<div class="project-card">
-  <h4>Personal Website</h4>
-  <p class="tech">This site, rebuilt with Flask while keeping the original design. Tech: Flask, Jinja2, HTML, CSS.</p>
-</div>
-
-<div class="project-card">
-  <h4>Data Pipelines</h4>
-  <p class="tech">Batch and streaming pipelines for analytics workloads. Tech: Python, Spark, SQL, AWS.</p>
-</div>
+<section class="section page">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">Portfolio</span>
+      <h2>Projects</h2>
+      <p>A selection of things I have built and worked on.</p>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h4>Personal Website</h4>
+        <p>This site — rebuilt with Flask and a custom, responsive front-end while keeping a clean, modern design.</p>
+        <div class="tags">
+          <span class="tag">Flask</span>
+          <span class="tag">Jinja2</span>
+          <span class="tag">HTML/CSS</span>
+        </div>
+      </div>
+      <div class="project-card">
+        <h4>Data Pipelines</h4>
+        <p>Batch and streaming pipelines for analytics workloads, transforming raw data into reliable, query-ready datasets.</p>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">Spark</span>
+          <span class="tag">SQL</span>
+          <span class="tag">AWS</span>
+        </div>
+      </div>
+      <div class="project-card">
+        <h4>Business Intelligence</h4>
+        <p>Dashboards and reporting models that turn data into clear, actionable insight for business stakeholders.</p>
+        <div class="tags">
+          <span class="tag">SQL</span>
+          <span class="tag">BI Tools</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 {% endblock %}

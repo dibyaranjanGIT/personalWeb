@@ -1,20 +1,23 @@
 {% extends 'base.html' %}
 
-{% block title %}About - Dibyaranjan Jena{% endblock %}
+{% block title %}About — Dibyaranjan Jena{% endblock %}
 
 {% block content %}
-<div class="page">
-  <h2>About Me</h2>
-  <p>I'm a Data Engineer, based out of India. I am a lifelong learner, intrigued about
-    finding meaning in data using my expertise in business intelligence tools. I am
-    passionate about programming and love to solve challenging business problems.</p>
-  <p>I work day to day with:</p>
-  <ul>
-    <li>Python for data processing and automation</li>
-    <li>SQL for analytics and modelling</li>
-    <li>Spark for large-scale data pipelines</li>
-    <li>AWS for cloud data infrastructure</li>
-    <li>Git for version control</li>
-  </ul>
-</div>
+<section class="section page">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">About</span>
+      <h2>About Me</h2>
+    </div>
+    <p class="about-text">
+      I'm a <strong>Data Engineer</strong>, based out of India. I am a lifelong learner,
+      intrigued about finding meaning in data using my expertise in business intelligence
+      tools. I am passionate about programming and love to solve challenging business problems.
+    </p>
+    <div class="hero-actions" style="justify-content:center; margin-top:32px;">
+      <a class="btn btn-primary" href="{{ url_for('index') }}#skills">My Skills</a>
+      <a class="btn btn-outline" href="{{ url_for('projects') }}">My Projects</a>
+    </div>
+  </div>
+</section>
 {% endblock %}

@@ -1,87 +1,84 @@
 {% extends 'base.html' %}
 
-{% block title %}Dibyaranjan Jena personal website{% endblock %}
+{% block title %}Dibyaranjan Jena — Data Engineer{% endblock %}
 
 {% block content %}
-<div class="top">
-  <img class="top_cloud" src="{{ url_for('static', filename='images/cloud.png') }}" alt="">
-  <h1>I'm Dibyaranjan</h1>
-  <p class="top-heading-prgrammer">a <span class="pro-grammer">pro</span>grammer and learner.</p>
-  <img class="bottom_cloud" src="{{ url_for('static', filename='images/cloud.png') }}" alt="">
-  <img class="hill_img" src="{{ url_for('static', filename='src/land.svg') }}" alt="">
-</div>
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <span class="hero-eyebrow">Data Engineer · India 🇮🇳</span>
+      <h1>Hi, I'm <span class="accent">Dibyaranjan</span></h1>
+      <p class="hero-sub">A programmer and lifelong learner.</p>
+      <p class="lead">
+        I find meaning in data using business intelligence tools, and I'm passionate
+        about programming and solving challenging business problems.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="{{ url_for('projects') }}">View Projects</a>
+        <a class="btn btn-outline" href="{{ url_for('contact') }}">Get in Touch</a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://www.linkedin.com/in/dibyaranjan-jena-%F0%9F%87%AE%F0%9F%87%B3-716517aa/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/dibyaranjanGIT" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://medium.com/@dibyaranjan.official" target="_blank" rel="noopener">Medium</a>
+        <a href="{{ url_for('static', filename='docs/Resume.docx') }}">Résumé</a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="{{ url_for('static', filename='src/me.png') }}" alt="Dibyaranjan Jena">
+    </div>
+  </div>
+</section>
 
-<div class="middle">
-  <div class="intro">
-    <img src="{{ url_for('static', filename='src/me.png') }}" alt="my image" width="200" height="200">
-    <h3 class="IntroHi">Hi,</h3>
-    <p class="my-intro"> I'm a <span class="de">Data Engineer</span>, based out of India. I am a lifelong learner, intrigued about finding meaning in data using my expertise in business intelligence tool. I am passionate about programming and love to solve
-      challenging business problems.
+<section class="section" id="about">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">About</span>
+      <h2>A little about me</h2>
+    </div>
+    <p class="about-text">
+      I'm a <strong>Data Engineer</strong>, based out of India. I am a lifelong learner,
+      intrigued about finding meaning in data using my expertise in business intelligence
+      tools. I am passionate about programming and love to solve challenging business problems.
     </p>
   </div>
-</div>
+</section>
 
-<div class="skills-container">
-  <div class="skills">
-    <hr>
-    <h2>My Skills</h2>
-    <table class="table-skills-data">
-      <tr>
-        <td><img class="python" src="{{ url_for('static', filename='images/python.png') }}" alt="Python"> </td>
-        <td><img class="sqlimage" src="{{ url_for('static', filename='images/sql.png') }}" alt="Sqlimage"></td>
-        <td><img class="powerbi" src="{{ url_for('static', filename='images/spark.png') }}" alt="" title="Spark"></td>
-        <td><img class="machine" src="{{ url_for('static', filename='images/aws-modified.png') }}" alt="AWS"></td>
-        <td><img class="machine" src="{{ url_for('static', filename='images/git.png') }}" alt="Git Versioning"></td>
-      </tr>
-      <tr>
-        <td>
-          <p>Python</p>
-        </td>
-        <td>
-          <p>SQL</p>
-        </td>
-        <td>
-          <p>Spark</p>
-        </td>
-        <td>
-          <p>AWS</p>
-        </td>
-        <td>
-          <p>GIT</p>
-        </td>
-      </tr>
-    </table>
+<section class="section section-alt" id="skills">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">Skills</span>
+      <h2>Tools I work with</h2>
+      <p>The core of my day-to-day data engineering stack.</p>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card"><img src="{{ url_for('static', filename='images/python.png') }}" alt=""><span>Python</span></div>
+      <div class="skill-card"><img src="{{ url_for('static', filename='images/sql.png') }}" alt=""><span>SQL</span></div>
+      <div class="skill-card"><img src="{{ url_for('static', filename='images/spark.png') }}" alt=""><span>Spark</span></div>
+      <div class="skill-card"><img src="{{ url_for('static', filename='images/aws-modified.png') }}" alt=""><span>AWS</span></div>
+      <div class="skill-card"><img src="{{ url_for('static', filename='images/git.png') }}" alt=""><span>Git</span></div>
+    </div>
   </div>
-</div>
+</section>
 
-<div class="education">
-  <hr>
-  <h2>My Education</h2>
-  <h4 class="higher-education"> Bachelor's of Degree in Electronics and Telecomm </h4>
-  <p class="higher-education-para"> Silicon Institute of Technology, Odisha, India </p>
-  <p class="higher-education-para"> 2010 - 2014 </p>
-
-  <h4 class="inter-education"> Higher Secondary Education in Science </h4>
-  <p class="inter-education-para"> Govt. Junior College, Odisha, India </p>
-  <p class="inter-education-para"> 2007 - 2009 </p>
-
-  <hr class="bottom-education-hr">
-</div>
-
-<div class="flat-bottom">
-  <h3 class="h3-do-you-love-prgramming-heading">Do you love programming ?</h3>
-
-  <div class="giphy-content">
-    <table>
-      <tr>
-        <td>
-          <iframe src="https://giphy.com/embed/iIqmM5tTjmpOB9mpbn" width="480" height="268" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-        </td>
-        <td>
-          <iframe src="https://giphy.com/embed/gG6OcTSRWaSis" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-        </td>
-      </tr>
-    </table>
+<section class="section" id="education">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">Education</span>
+      <h2>My education</h2>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h4>Bachelor's Degree in Electronics &amp; Telecommunication</h4>
+        <p class="place">Silicon Institute of Technology, Odisha, India</p>
+        <span class="years">2010 — 2014</span>
+      </div>
+      <div class="timeline-item">
+        <h4>Higher Secondary Education in Science</h4>
+        <p class="place">Govt. Junior College, Odisha, India</p>
+        <span class="years">2007 — 2009</span>
+      </div>
+    </div>
   </div>
-</div>
+</section>
 {% endblock %}

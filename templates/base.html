@@ -4,29 +4,32 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% block title %}Dibyaranjan Jena{% endblock %}</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <title>{% block title %}Dibyaranjan Jena — Data Engineer{% endblock %}</title>
+  <meta name="description" content="Dibyaranjan Jena — Data Engineer based in India. Python, SQL, Spark, AWS.">
   <link rel="icon" href="{{ url_for('static', filename='src/monitor.ico') }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Montserrat:wght@600&family=PT+Serif:ital@1&family=Roboto+Slab&family=Sacramento&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 
 <body>
-  <div class="header-div">
-    <table class="header-table">
-      <tr>
-        <td class="header-table-data"><a class="header-data-link" href="{{ url_for('static', filename='docs/Resume.docx') }}">Resume</a></td>
-        <td class="header-table-data"><a class="header-data-link" href="https://github.com/dibyaranjanGIT">Git</a></td>
-      </tr>
-    </table>
-    <nav class="header-nav">
-      <a href="{{ url_for('index') }}">Home</a>
-      <a href="{{ url_for('about') }}">About</a>
-      <a href="{{ url_for('projects') }}">Projects</a>
-      <a href="{{ url_for('contact') }}">Contact</a>
-    </nav>
-  </div>
+  <header class="nav">
+    <div class="container">
+      <a class="nav-brand" href="{{ url_for('index') }}">Dibyaranjan<span>.</span></a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="{{ url_for('index') }}#about">About</a></li>
+        <li><a href="{{ url_for('index') }}#skills">Skills</a></li>
+        <li><a href="{{ url_for('index') }}#education">Education</a></li>
+        <li><a href="{{ url_for('projects') }}">Projects</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+        <li><a class="btn btn-outline" href="{{ url_for('static', filename='docs/Resume.docx') }}">Resume</a></li>
+      </ul>
+    </div>
+  </header>
 
   {% with messages = get_flashed_messages(with_categories=true) %}
   {% if messages %}
@@ -38,14 +41,36 @@
   {% endif %}
   {% endwith %}
 
-  {% block content %}{% endblock %}
+  <main>
+    {% block content %}{% endblock %}
+  </main>
 
-  <div class="bottom">
-    <a class="footer-link-linkedin" href="https://www.linkedin.com/in/dibyaranjan-jena-%F0%9F%87%AE%F0%9F%87%B3-716517aa/">LinkedIn</a>
-    <a class="footer-link-git" href="https://github.com/dibyaranjanGIT">Github</a>
-    <p class="rserved">@ {{ current_year }} <a href="{{ url_for('index') }}">Dibyaranjan</a>
-      All rights reserved</p>
-  </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-socials">
+        <a href="https://www.linkedin.com/in/dibyaranjan-jena-%F0%9F%87%AE%F0%9F%87%B3-716517aa/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/dibyaranjanGIT" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://medium.com/@dibyaranjan.official" target="_blank" rel="noopener">Medium</a>
+        <a href="{{ url_for('contact') }}">Contact</a>
+      </div>
+      <p class="copyright">&copy; {{ current_year }} <a href="{{ url_for('index') }}">Dibyaranjan Jena</a>. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var toggle = document.querySelector('.nav-toggle');
+      var links = document.getElementById('navLinks');
+      if (!toggle || !links) return;
+      toggle.addEventListener('click', function () {
+        var open = links.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', open);
+      });
+      links.addEventListener('click', function (e) {
+        if (e.target.tagName === 'A') links.classList.remove('open');
+      });
+    })();
+  </script>
 </body>
 
 </html>
