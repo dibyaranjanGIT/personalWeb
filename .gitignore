@@ -20,3 +20,6 @@ instance/
 temp.py
 temp.json
 temp_server_*.log
+
+# Claude Code local settings (personal, not shared)
+.claude/settings.local.json
