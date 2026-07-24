@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: personal-website
+    runtime: python
+    plan: free
+    # uv is the project's package manager (see uv.lock / pyproject.toml).
+    buildCommand: "pip install uv && uv sync --frozen"
+    startCommand: "uv run gunicorn app:app --bind 0.0.0.0:$PORT"
+    envVars:
+      # Secrets are NOT stored in the repo. sync:false makes Render prompt for
+      # them in the dashboard (Environment tab) on first deploy.
+      - key: SECRET_KEY
+        sync: false
+      - key: MAIL_USERNAME
+        sync: false
+      - key: MAIL_PASSWORD
+        sync: false
+      - key: CONTACT_RECIPIENT
+        value: dibyaranjan.official@gmail.com

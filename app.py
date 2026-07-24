@@ -103,7 +103,10 @@ def contact():
 
     return render_template('contact.html')
 
+# Create tables at import so they exist under any WSGI server (e.g. gunicorn
+# on Render), not only when this file is run directly.
+with app.app_context():
+    db.create_all()
+
 if __name__ == '__main__':
-    with app.app_context():
-        db.create_all()
     app.run(debug=True)
